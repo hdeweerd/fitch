@@ -1,0 +1,206 @@
+select {
+	margin-right: 5px;
+}
+
+.fitchExample {
+	border: 1px solid black;
+	padding: 20px;
+	width: 300px;
+}
+.fitchExample .fitchExampleHeader {
+	text-align: center;
+	font-weight: bold;
+	display: block;
+	
+}
+.fitchExample td:first-child {
+	text-align: right;
+	padding-right: 0.5em;
+}
+.fitchExample table {
+	margin: 1em 0;
+	width: 100%;
+}
+.fitchExample td:nth-last-child(2) {
+	padding-left: 0.2em;
+}
+.fitchExample td:last-child {
+	text-align: right;
+	padding-left: 50px;
+}
+#symbolTable th {
+	text-align: left;
+	padding-right: 10px;
+	
+}
+#symbolTable tr td:nth-child(2), #symbolTable tr td:nth-child(3) {
+	text-align: center;
+}
+
+
+.fitchContainer {
+	min-width: 625px;
+	margin-bottom: 2em;
+}
+#ruleColumn {
+	width: 250px;
+}
+#buttonColumn {
+	width: 25px;
+}
+
+div {
+	display:inline-block;
+}
+
+td {
+	padding: 0px 5px 0px 0px;
+	position: relative;
+	white-space: nowrap;
+}
+
+select {
+	border: none;
+	background-color: transparent;
+}
+
+.fitchTable th {
+	text-align: left;
+}
+
+/* Line counters */
+
+table {
+    counter-reset: rowNumber -1;
+}
+
+.fitchTable tr {
+    counter-increment: rowNumber;
+}
+
+.fitchTable tr td:first-child {
+	text-align:right;
+}
+.fitchTable tr td:first-child::before {
+	content: counter(rowNumber);
+	min-width: 1em;
+	margin-right: 0.5em;
+}
+
+/* Assumption bars */
+
+.turnstile {
+	height:100%;
+	position: absolute;
+	float: left;
+}
+
+.bar {
+	width: 5px;
+	height: 105%;/* In Firefox, bars need to larger than 100% */
+	border-left: 1px solid black;
+	margin: 0 5px 0 0;
+	box-sizing: border-box;
+}
+
+.premiseLine {
+	border-bottom: 1px solid black;
+}
+
+.assumptionLine {
+	height: 90% !important;
+	top: 13%;
+}
+
+/* Goal */
+
+.hangingElement {
+	position: absolute;
+	bottom: -1.5em;
+	white-space: nowrap;
+}
+
+.proofFound {
+	background: lightgreen;
+}
+
+#goalBox {
+	left: 35px;
+	min-width: 100px;
+}
+
+/* Buttons */
+
+.interfaceButton {
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	width: 5px;
+	height: 6px;
+	border: transparent solid 2px;
+	border-radius: 4px;
+	font-size:6px;
+	font-weight: bold;
+	margin-left: 1px;
+}
+.insertButton {
+	color: #FFFFFF;
+	background-color: green;
+}
+.closeButton {
+	color: #FFFFFF;
+	background-color: #AA0000;
+}
+
+/* Tooltips */
+
+div, .tooltip {
+	position:relative;
+}
+
+[contenteditable="true"] {
+	cursor:pointer;
+}
+
+.errorLine {
+	border-bottom: 1px dashed red;
+}
+
+.lefttooltip {
+	left: 0;
+}
+.righttooltip {
+    right: 0; 
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background-color: darkred;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 5px 5px;
+    border-radius: 6px;
+	font-size: 0.75em;
+ 
+    width: 300;
+    bottom: 100%;
+	position: absolute;
+    z-index: 1;
+}
+
+.tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: darkred transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
